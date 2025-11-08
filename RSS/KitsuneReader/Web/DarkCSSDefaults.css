@@ -1,0 +1,5 @@
+html { filter: invert(1) hue-rotate(180deg); background:#050505; }
+body { background:transparent; }
+img, video, picture, canvas, svg { filter: invert(1) hue-rotate(180deg) !important; }
+*:not(img):not(video):not(picture):not(canvas):not(svg) { mix-blend-mode: normal; }
+a { color:#96c7ff; }
