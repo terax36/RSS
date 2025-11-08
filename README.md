@@ -8,7 +8,7 @@ SwiftUI 製のローカルファースト RSS リーダーです。FeedKit / Swi
 3. 対象デバイスを iOS 17+ シミュレータまたは実機に設定して実行
 
 ## CI
-GitHub Actions (macOS 14 ランナー) で `xcodebuild test` を実行するワークフローを追加しました。`main` ブランチへのプッシュや Pull Request で自動的にビルドとテストが走ります。
+GitHub Actions (macOS 14 ランナー) で `xcodebuild test` を実行するワークフローを追加しました。`main` ブランチへのプッシュや Pull Request に加えて、`ci/` で始まるブランチへのプッシュと手動トリガー (`workflow_dispatch`) でもビルドとテストを走らせることができます。
 
 ## 翻訳モデル
 - 既定では辞書ベースの軽量翻訳を使用します。
