@@ -17,7 +17,7 @@ jobs:
       - name: Select Xcode 15.4
         run: sudo xcode-select -switch /Applications/Xcode_15.4.app
       - name: Resolve dependencies
-        run: xcodebuild -resolvePackageDependencies -project KitsuneReader.xcodeproj -scheme KitsuneReader
+        run: swift package resolve
       - name: Build and test (iOS 17.5)
         run: |
           xcodebuild test \
