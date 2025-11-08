@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "KitsuneReader",
     platforms: [
-        .iOS(.v18),
+        .iOS(.v17),
         .macOS(.v12)
     ],
     products: [
