@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="KitsuneReader" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21731" systemVersion="23E224" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Article" representedClassName="Article" syncable="YES">
+        <attribute name="author" optional="YES" attributeType="String"/>
+        <attribute name="contentCached" optional="NO" attributeType="Boolean" defaultValueString="NO"/>
+        <attribute name="feedID" optional="YES" attributeType="UUIDAttribute"/>
+        <attribute name="guid" optional="YES" attributeType="String" indexed="YES"/>
+        <attribute name="id" optional="NO" attributeType="UUIDAttribute" indexed="YES"/>
+        <attribute name="isRead" optional="NO" attributeType="Boolean" defaultValueString="NO" indexed="YES"/>
+        <attribute name="isStarred" optional="NO" attributeType="Boolean" defaultValueString="NO" indexed="YES"/>
+        <attribute name="languageCode" optional="YES" attributeType="String"/>
+        <attribute name="link" optional="YES" attributeType="String"/>
+        <attribute name="publishedAt" optional="YES" attributeType="Date" indexed="YES"/>
+        <attribute name="readingProgress" optional="NO" attributeType="Double" defaultValueString="0"/>
+        <attribute name="summary" optional="YES" attributeType="String"/>
+        <attribute name="thumbnailURL" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="translatedTitle" optional="YES" attributeType="String"/>
+        <attribute name="translationHash" optional="YES" attributeType="String"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Date"/>
+        <relationship name="content" optional="YES" toMany="NO" deletionRule="Cascade" destinationEntity="ArticleContent" inverseName="article" inverseEntity="ArticleContent"/>
+        <relationship name="feed" optional="YES" toMany="NO" deletionRule="Nullify" destinationEntity="Feed" inverseName="articles" inverseEntity="Feed"/>
+    </entity>
+    <entity name="ArticleContent" representedClassName="ArticleContent" syncable="YES">
+        <attribute name="articleID" optional="YES" attributeType="UUIDAttribute"/>
+        <attribute name="lastRenderedDark" optional="NO" attributeType="Boolean" defaultValueString="NO"/>
+        <attribute name="readabilityHTML" optional="YES" attributeType="String"/>
+        <attribute name="readingTimeSec" optional="NO" attributeType="Integer 32" defaultValueString="0"/>
+        <attribute name="textPlain" optional="YES" attributeType="String"/>
+        <attribute name="wordCount" optional="NO" attributeType="Integer 32" defaultValueString="0"/>
+        <relationship name="article" optional="YES" toMany="NO" deletionRule="Nullify" destinationEntity="Article" inverseName="content" inverseEntity="Article"/>
+    </entity>
+    <entity name="Feed" representedClassName="Feed" syncable="YES">
+        <attribute name="customCSS" optional="YES" attributeType="String"/>
+        <attribute name="etag" optional="YES" attributeType="String"/>
+        <attribute name="faviconURL" optional="YES" attributeType="String"/>
+        <attribute name="feedURL" optional="YES" attributeType="String" indexed="YES"/>
+        <attribute name="id" optional="NO" attributeType="UUIDAttribute" indexed="YES"/>
+        <attribute name="isMuted" optional="NO" attributeType="Boolean" defaultValueString="NO"/>
+        <attribute name="lastModified" optional="YES" attributeType="Date"/>
+        <attribute name="refreshIntervalMin" optional="NO" attributeType="Integer 32" defaultValueString="60"/>
+        <attribute name="siteURL" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="articles" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Article" inverseName="feed" inverseEntity="Article"/>
+        <relationship name="folders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Folder" inverseName="feeds" inverseEntity="Folder"/>
+    </entity>
+    <entity name="Folder" representedClassName="Folder" syncable="YES">
+        <attribute name="id" optional="NO" attributeType="UUIDAttribute"/>
+        <attribute name="name" optional="NO" attributeType="String"/>
+        <attribute name="sortOrder" optional="NO" attributeType="Integer 32" defaultValueString="0"/>
+        <relationship name="feeds" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Feed" inverseName="folders" inverseEntity="Feed"/>
+    </entity>
+    <entity name="FeedFolder" representedClassName="FeedFolder" syncable="YES">
+        <attribute name="feedID" optional="NO" attributeType="UUIDAttribute"/>
+        <attribute name="folderID" optional="NO" attributeType="UUIDAttribute"/>
+        <attribute name="id" optional="NO" attributeType="UUIDAttribute"/>
+    </entity>
+    <entity name="Rule" representedClassName="Rule" syncable="YES">
+        <attribute name="actionHide" optional="NO" attributeType="Boolean" defaultValueString="YES"/>
+        <attribute name="appliesToFeeds" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="NO" attributeType="UUIDAttribute"/>
+        <attribute name="isRegex" optional="NO" attributeType="Boolean" defaultValueString="NO"/>
+        <attribute name="pattern" optional="NO" attributeType="String"/>
+    </entity>
+    <entity name="Settings" representedClassName="Settings" syncable="YES">
+        <attribute name="autoTranslateEnglishTitles" optional="NO" attributeType="Boolean" defaultValueString="NO"/>
+        <attribute name="cellularImageBlocking" optional="NO" attributeType="Boolean" defaultValueString="NO"/>
+        <attribute name="id" optional="NO" attributeType="UUIDAttribute"/>
+        <attribute name="markReadOnScrollThreshold" optional="NO" attributeType="Double" defaultValueString="0.7"/>
+        <attribute name="retentionDays" optional="NO" attributeType="Integer 32" defaultValueString="30"/>
+        <attribute name="themeMode" optional="NO" attributeType="String" defaultValueString="system"/>
+    </entity>
+    <elements>
+        <element name="Article" positionX="-605" positionY="-640" width="128" height="285"/>
+        <element name="ArticleContent" positionX="-340" positionY="-512" width="128" height="165"/>
+        <element name="Feed" positionX="-905" positionY="-517" width="128" height="240"/>
+        <element name="Folder" positionX="-905" positionY="-820" width="128" height="135"/>
+        <element name="FeedFolder" positionX="-1080" positionY="-320" width="128" height="105"/>
+        <element name="Rule" positionX="-340" positionY="-820" width="128" height="150"/>
+        <element name="Settings" positionX="-55" positionY="-640" width="128" height="150"/>
+    </elements>
+</model>

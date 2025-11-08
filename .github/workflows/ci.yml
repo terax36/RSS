@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - name: Select Xcode 15.4
+        run: sudo xcode-select -switch /Applications/Xcode_15.4.app
+      - name: Resolve dependencies
+        run: xcodebuild -resolvePackageDependencies -project KitsuneReader.xcodeproj -scheme KitsuneReader
+      - name: Build and test (iOS 17.5)
+        run: |
+          xcodebuild test \
+            -project KitsuneReader.xcodeproj \
+            -scheme KitsuneReader \
+            -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.5' \
+            -skipPackagePluginValidation \
+            -allowProvisioningUpdates
