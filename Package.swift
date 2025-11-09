@@ -26,7 +26,9 @@ let package = Package(
                 "SwiftSoup",
                 "Nuke"
             ],
-            path: "KitsuneReader",
+            exclude: [
+                "Info.plist"
+            ],
             resources: [
                 .process("Assets.xcassets"),
                 .process("Models/KitsuneReader.xcdatamodeld"),
@@ -37,8 +39,7 @@ let package = Package(
         ),
         .testTarget(
             name: "KitsuneReaderTests",
-            dependencies: ["KitsuneReader"],
-            path: "KitsuneReaderTests"
+            dependencies: ["KitsuneReader"]
         ),
     ]
 )

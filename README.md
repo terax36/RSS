@@ -7,6 +7,12 @@ SwiftUI 製のローカルファースト RSS リーダーです。FeedKit / Swi
 2. 依存ライブラリ (FeedKit / SwiftSoup / Nuke) を Swift Package Manager が自動取得するのを待つ
 3. 対象デバイスを iOS 17+ シミュレータまたは実機に設定して実行
 
+## ディレクトリ構成
+- `Sources/KitsuneReader/` — アプリケーション本体のソースとリソース
+- `Tests/KitsuneReaderTests/` — 単体テスト
+- `Tests/KitsuneReaderUITests/` — UI テスト
+- `KitsuneReader.xcodeproj` — Xcode プロジェクト設定
+
 ## 翻訳モデル
 - 既定では辞書ベースの軽量翻訳を使用します。
 - iOS 18 以降で Apple Translation API が利用可能な場合は自動的に切り替わります。

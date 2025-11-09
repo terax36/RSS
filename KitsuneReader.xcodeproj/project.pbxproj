@@ -43,7 +43,7 @@
 		E8BF001F /* (null) in Sources */ = {isa = PBXBuildFile; };
 		E8BF0020 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		E8BF0021 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		E8BF0022 /* KitsuneReader/Models/KitsuneReader.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = E8B100000000000000000004 /* KitsuneReader/Models/KitsuneReader.xcdatamodeld */; };
+		E8BF0022 /* Models/KitsuneReader.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = E8B100000000000000000004 /* Models/KitsuneReader.xcdatamodeld */; };
 		E8BF0023 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		E8BF0024 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		E8BF0025 /* (null) in Resources */ = {isa = PBXBuildFile; };
@@ -132,36 +132,38 @@
 			);
 			sourceTree = "<group>";
 		};
-		E8B300000000000000000010 = {
-			isa = PBXGroup;
-			children = (
-				E8B300000000000000000110 /* KitsuneReader/Persistence */,
-				E8B300000000000000000120 /* KitsuneReader/Models */,
-				E8B300000000000000000130 /* KitsuneReader/Network */,
-				E8B300000000000000000140 /* KitsuneReader/Parsing */,
-				E8B300000000000000000150 /* KitsuneReader/Translation */,
-				E8B300000000000000000160 /* KitsuneReader/Web */,
-				E8B300000000000000000170 /* KitsuneReader/UI */,
-				E8B300000000000000000180 /* KitsuneReader/ViewModels */,
-				E8B300000000000000000190 /* KitsuneReader/Services */,
-				E8B3000000000000000001A0 /* KitsuneReader/Background */,
-				E8B3000000000000000001B0,
-				E8B3000000000000000001C0 /* KitsuneReader/Samples */,
-			);
-			sourceTree = "<group>";
-		};
+                E8B300000000000000000010 = {
+                        isa = PBXGroup;
+                        children = (
+                                E8B300000000000000000110 /* Persistence */,
+                                E8B300000000000000000120 /* Models */,
+                                E8B300000000000000000130 /* Network */,
+                                E8B300000000000000000140 /* Parsing */,
+                                E8B300000000000000000150 /* Translation */,
+                                E8B300000000000000000160 /* Web */,
+                                E8B300000000000000000170 /* UI */,
+                                E8B300000000000000000180 /* ViewModels */,
+                                E8B300000000000000000190 /* Services */,
+                                E8B3000000000000000001A0 /* Background */,
+                                E8B3000000000000000001B0,
+                                E8B3000000000000000001C0 /* Samples */,
+                        );
+                        name = KitsuneReader;
+                        path = Sources/KitsuneReader;
+                        sourceTree = "<group>";
+                };
 		E8B300000000000000000020 /* KitsuneReaderTests */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = KitsuneReaderTests;
+			path = Tests/KitsuneReaderTests;
 			sourceTree = "<group>";
 		};
 		E8B300000000000000000030 /* KitsuneReaderUITests */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = KitsuneReaderUITests;
+			path = Tests/KitsuneReaderUITests;
 			sourceTree = "<group>";
 		};
 		E8B300000000000000000040 /* Products */ = {
@@ -171,34 +173,34 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E8B300000000000000000110 /* KitsuneReader/Persistence */ = {
+		E8B300000000000000000110 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = KitsuneReader/Persistence;
+			path = Persistence;
 			sourceTree = "<group>";
 		};
-		E8B300000000000000000120 /* KitsuneReader/Models */ = {
+		E8B300000000000000000120 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E8B100000000000000000004 /* KitsuneReader/Models/KitsuneReader.xcdatamodeld */,
+				E8B100000000000000000004 /* Models/KitsuneReader.xcdatamodeld */,
 			);
-			path = KitsuneReader/Models;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		E8B300000000000000000130 /* KitsuneReader/Network */ = {
+		E8B300000000000000000130 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = KitsuneReader/Network;
+			path = Network;
 			sourceTree = "<group>";
 		};
-		E8B300000000000000000140 /* KitsuneReader/Parsing */ = {
+		E8B300000000000000000140 /* Parsing */ = {
 			isa = PBXGroup;
 			children = (
 				E8B300000000000000000141 /* Readability */,
 			);
-			path = KitsuneReader/Parsing;
+			path = Parsing;
 			sourceTree = "<group>";
 		};
 		E8B300000000000000000141 /* Readability */ = {
@@ -208,21 +210,21 @@
 			path = Readability;
 			sourceTree = "<group>";
 		};
-		E8B300000000000000000150 /* KitsuneReader/Translation */ = {
+		E8B300000000000000000150 /* Translation */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = KitsuneReader/Translation;
+			path = Translation;
 			sourceTree = "<group>";
 		};
-		E8B300000000000000000160 /* KitsuneReader/Web */ = {
+		E8B300000000000000000160 /* Web */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = KitsuneReader/Web;
+			path = Web;
 			sourceTree = "<group>";
 		};
-		E8B300000000000000000170 /* KitsuneReader/UI */ = {
+		E8B300000000000000000170 /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				E8B300000000000000000171 /* Root */,
@@ -231,7 +233,7 @@
 				E8B300000000000000000174 /* Settings */,
 				E8B300000000000000000175 /* Common */,
 			);
-			path = KitsuneReader/UI;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		E8B300000000000000000171 /* Root */ = {
@@ -269,25 +271,25 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		E8B300000000000000000180 /* KitsuneReader/ViewModels */ = {
+		E8B300000000000000000180 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = KitsuneReader/ViewModels;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		E8B300000000000000000190 /* KitsuneReader/Services */ = {
+		E8B300000000000000000190 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = KitsuneReader/Services;
+			path = Services;
 			sourceTree = "<group>";
 		};
-		E8B3000000000000000001A0 /* KitsuneReader/Background */ = {
+		E8B3000000000000000001A0 /* Background */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = KitsuneReader/Background;
+			path = Background;
 			sourceTree = "<group>";
 		};
 		E8B3000000000000000001B0 = {
@@ -296,11 +298,11 @@
 			);
 			sourceTree = "<group>";
 		};
-		E8B3000000000000000001C0 /* KitsuneReader/Samples */ = {
+		E8B3000000000000000001C0 /* Samples */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = KitsuneReader/Samples;
+			path = Samples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,7 +414,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8BF0022 /* KitsuneReader/Models/KitsuneReader.xcdatamodeld in Resources */,
+				E8BF0022 /* Models/KitsuneReader.xcdatamodeld in Resources */,
 				E8BF0023 /* (null) in Resources */,
 				E8BF0024 /* (null) in Resources */,
 				E8BF0025 /* (null) in Resources */,
@@ -454,7 +456,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "STAMP_PATH=\"$DERIVED_FILE_DIR/ValidateAssets.stamp\"\necho \"Validating Assets.xcassets...\"\nASSETS_DIR=\"$SRCROOT/KitsuneReader/Assets.xcassets\"\nif [ -d \"$ASSETS_DIR/AppIcon.appiconset\" ]; then\n    echo \"AppIcon.appiconset found.\"\n    ls -la \"$ASSETS_DIR/AppIcon.appiconset/\"\n    if [ -f \"$ASSETS_DIR/AppIcon.appiconset/Contents.json\" ]; then\n        echo \"Contents.json exists. Checking for filenames...\"\n        grep -o '\"filename\"' \"$ASSETS_DIR/AppIcon.appiconset/Contents.json\" || echo \"No filename fields found in Contents.json\"\n    else\n        echo \"Contents.json not found.\"\n    fi\nelse\n    echo \"AppIcon.appiconset not found.\"\nfi\ntouch \"$STAMP_PATH\"\n";
+			shellScript = "STAMP_PATH=\"$DERIVED_FILE_DIR/ValidateAssets.stamp\"\necho \"Validating Assets.xcassets...\"\nASSETS_DIR=\"$SRCROOT/Sources/KitsuneReader/Assets.xcassets\"\nif [ -d \"$ASSETS_DIR/AppIcon.appiconset\" ]; then\n    echo \"AppIcon.appiconset found.\"\n    ls -la \"$ASSETS_DIR/AppIcon.appiconset/\"\n    if [ -f \"$ASSETS_DIR/AppIcon.appiconset/Contents.json\" ]; then\n        echo \"Contents.json exists. Checking for filenames...\"\n        grep -o '\"filename\"' \"$ASSETS_DIR/AppIcon.appiconset/Contents.json\" || echo \"No filename fields found in Contents.json\"\n    else\n        echo \"Contents.json not found.\"\n    fi\nelse\n    echo \"AppIcon.appiconset not found.\"\nfi\ntouch \"$STAMP_PATH\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -652,7 +654,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MQ646C4YXR;
-				INFOPLIST_FILE = KitsuneReader/Info.plist;
+				INFOPLIST_FILE = Sources/KitsuneReader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -673,7 +675,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MQ646C4YXR;
-				INFOPLIST_FILE = KitsuneReader/Info.plist;
+				INFOPLIST_FILE = Sources/KitsuneReader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -825,11 +827,11 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		E8B100000000000000000004 /* KitsuneReader/Models/KitsuneReader.xcdatamodeld */ = {
+		E8B100000000000000000004 /* Models/KitsuneReader.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 			);
-			path = KitsuneReader/Models/KitsuneReader.xcdatamodeld;
+			path = Models/KitsuneReader.xcdatamodeld;
 			sourceTree = SOURCE_ROOT;
 			versionGroupType = wrapper.xcdatamodel;
 		};
